@@ -74,10 +74,10 @@ class BaseClient
         $str = chunk_split($this->config->getPrivateKey(), 64, "\n");
         $privateKeyString = "-----BEGIN RSA PRIVATE KEY-----\n$str-----END RSA PRIVATE KEY-----\n";
 
-        // 生成签名原文
         $appid = $this->config->getAppId();
         $timestamp = time();  // 当前时间戳
 
+        // 生成签名原文
         $originalData = array(
             "appId" => $appid,
             "timestamp" => $timestamp
@@ -87,12 +87,12 @@ class BaseClient
 
         // 需要添加签名到请求头部中
         return [
-            "Authorization" => json_encode(array(
+            "Authorization" => json_encode([
                 "secretKeyVersion" => $this->config->getVersion(),
                 "appId" => $appid,
                 "sign" => $signature,
                 "original" => json_encode($originalData, JSON_UNESCAPED_UNICODE)
-            ), JSON_UNESCAPED_UNICODE)
+            ], JSON_UNESCAPED_UNICODE)
         ];
     }
 

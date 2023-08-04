@@ -3,6 +3,7 @@
 namespace Ihome\WujieAi\Traits;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\RequestOptions;
 use Ihome\WujieAi\Exceptions\InvalidHttpException;
 
@@ -13,7 +14,6 @@ Trait HasHttpRequest
     private $options = [];
 
     private $query;
-
 
     public function setConnectTimeOut($seconds)
     {
@@ -85,7 +85,7 @@ Trait HasHttpRequest
      * User: ❤ CLANNAD ~ After Story By だんご
      * @param string $method
      * @param string $url
-     * @return mixed
+     * @return array
      * @throws InvalidHttpException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
@@ -95,16 +95,34 @@ Trait HasHttpRequest
         $this->options[RequestOptions::TIMEOUT] = $this->options[RequestOptions::TIMEOUT] ?? 30;
 
         try{
-            $response = $this->getHttpClient()->request($method, sprintf('%s%s',$this->getBaseUrl(), $url), $this->options);
 
-            return json_decode($response->getBody()->getContents(), true);
+            $response = $this->getHttpClient()->request($method, sprintf('%s%s',$this->getBaseUrl(), $url), $this->options);
+            return $this->handlerResponse($response);
+
         }catch (\Exception $exception){
+
+            if ($exception instanceof RequestException) {
+                if ($exception->hasResponse()) {
+                    return $this->handlerResponse($exception->getResponse());
+                }
+            }
+
             throw new InvalidHttpException($exception->getMessage());
         }
     }
 
-    public function getHttpClient(): Client
+    private function getHttpClient(): Client
     {
         return new Client();
+    }
+
+    /**
+     * 处理返回结果
+     * @param $response
+     * @return mixed
+     */
+    private function handlerResponse($response): array
+    {
+        return json_decode($response->getBody()->getContents(), true);
     }
 }
