@@ -32,7 +32,7 @@ class BaseClient
      * 动态调用请求方法
      * @param $method
      * @param $args
-     * @return string|null
+     * @return array
      * @throws InvalidRequestMethodException
      */
     public function __call($method, $args)
