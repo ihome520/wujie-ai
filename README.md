@@ -1,9 +1,15 @@
 <h1 align="center"> Wujie-Ai </h1>
 
-<div style="text-align: center">
-<span style="border-bottom:1px solid #b1bebf;"> 无界AI 文生图，图生图，视频生视频相关接口SDK扩展包</span>
+<div align="center">
+<span>无界AI 文生图、图生图、视频生视频相关接口SDK扩展包</span>
 </div>
-
+<div align="center">
+<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="http://poser.pugx.org/ihome/wujie-ai/v/stable" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="https://img.shields.io/badge/language-php-blue" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="http://poser.pugx.org/ihome/wujie-ai/v/unstable" alt="Latest Unstable Version"></a>
+<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="http://poser.pugx.org/ihome/wujie-ai/license" alt="License"></a>
+<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="http://poser.pugx.org/ihome/wujie-ai/require/php" alt="License"></a>
+</div>
 
 ### 安装
 
@@ -33,7 +39,7 @@ WUJIE_AI_BASE_URL=https://www.abc.com # 注意地址不含最后的斜杠
 ```
 
 ### 如何使用
-> 使用前，请向无界AI官方申请相关APPID 秘钥，这里假设你已经申请过了
+> 使用前，请向[无界AI](https://www.wujieai.com/)申请相关APPID、秘钥，这里假设你已经申请过了
 
 ```php
 $config = [
@@ -78,6 +84,15 @@ try {
 ```
 
 如有任何问题或者建议，欢迎在`Issues`中留言提出。。。
+
+### 致谢
+超哥的扩展包教程：[LX2 PHP 扩展包实战教程 - 从入门到发布](https://learnku.com/courses/creating-package)
+
+### Other
+
+如果您喜欢，欢迎Star，体验AI绘画，欢迎使用AIyaaa
+
+<a target="_blank" href="https://cdn-us.imgs.moe/2023/08/05/64cdb1204ae80.jpg"><img decoding="async" src="https://cdn-us.imgs.moe/2023/08/05/64cdb1204ae80.jpg" width="50%"></a>
 
 ### License
 
