@@ -35,7 +35,7 @@ class BaseClient
      * @return array
      * @throws InvalidRequestMethodException
      */
-    public function __call($method, $args)
+    public function __call($method, $args): array
     {
         $httpMethods = ['get', 'post', 'put', 'delete'];
 
@@ -56,10 +56,10 @@ class BaseClient
     }
 
     /**
-     * 设置请求URL
+     * 获取请求URL
      * @return mixed|string
      */
-    private function getBaseUrl()
+    private function getBaseUrl(): string
     {
         return $this->config->getUrl();
     }
@@ -69,7 +69,7 @@ class BaseClient
      * User: ❤ CLANNAD ~ After Story By だんご
      * @return array
      */
-    private function getSign()
+    private function getSign(): array
     {
         $str = chunk_split($this->config->getPrivateKey(), 64, "\n");
         $privateKeyString = "-----BEGIN RSA PRIVATE KEY-----\n$str-----END RSA PRIVATE KEY-----\n";
@@ -101,9 +101,9 @@ class BaseClient
      * @param $url
      * @param $headers
      * @param $method
-     * @return mixed
+     * @return array
      */
-    private function headerHandler($url, $headers, $method)
+    private function headerHandler($url, $headers, $method): array
     {
         if ( ! in_array(ltrim($url, '/'), $this->getOpenUrl())) {
             $signature = $this->getSign();
@@ -119,9 +119,9 @@ class BaseClient
 
     /**
      * 开放接口集 不需要鉴权的域名
-     * @return string[]
+     * @return array
      */
-    private function getOpenUrl()
+    private function getOpenUrl(): array
     {
         return [
             '/ai/models'

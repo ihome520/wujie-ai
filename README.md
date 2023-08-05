@@ -72,7 +72,7 @@ try {
                     'model_code' => 22,
               ]);  // 用视频生成另外一个风格的视频
     $result = $wujie->video->info(['key' => '2C633CD85DW0D869AXSYYCDADE3CWXAA']);// 视频生成成功后的视频详情查询
-    $result = $wujie->image->generatingInfo(['2C633CD85DW0D869AXSYYCDADE3CWXAA']);// 视频生成结果查询
+    $result = $wujie->video->generatingInfo(['2C633CD85DW0D869AXSYYCDADE3CWXAA']);// 视频生成结果查询
     $result = $wujie->video->optionMenu(); // 获取视频生视频模型列表及价格表
     $result = $wujie->video->waitTime(['modelCode' => 22]); // 视频生视频模型排队情况查询
     

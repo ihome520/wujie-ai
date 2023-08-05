@@ -9,18 +9,22 @@ use Ihome\WujieAi\Exceptions\InvalidHttpException;
 
 Trait HasHttpRequest
 {
+    /**
+     * @var string 请求域名地址
+     */
     private $baseUrl;
 
+    /**
+     * @var array 请求配置参数
+     */
     private $options = [];
-
-    private $query;
 
     public function setConnectTimeOut($seconds)
     {
         $this->options[RequestOptions::CONNECT_TIMEOUT] = $seconds;
     }
 
-    public function getConnectTimeOut()
+    public function getConnectTimeOut(): int
     {
         return $this->options[RequestOptions::CONNECT_TIMEOUT];
     }
@@ -30,7 +34,7 @@ Trait HasHttpRequest
         $this->options[RequestOptions::TIMEOUT] = $seconds;
     }
 
-    public function getTimeOut()
+    public function getTimeOut(): int
     {
         return $this->options[RequestOptions::TIMEOUT];
     }
@@ -45,7 +49,7 @@ Trait HasHttpRequest
         $this->options['headers'][$key] = $value;
     }
 
-    public function getHeaders()
+    public function getHeaders(): string
     {
         return $this->options['headers'];
     }
@@ -55,7 +59,7 @@ Trait HasHttpRequest
         $this->baseUrl = $baseUrl;
     }
 
-    public function getBaseUrl()
+    public function getBaseUrl(): string
     {
         return $this->baseUrl;
     }
@@ -65,7 +69,7 @@ Trait HasHttpRequest
         $this->options['query'] = $query;
     }
 
-    public function getQuery()
+    public function getQuery(): array
     {
         return $this->options['query'];
     }
@@ -75,7 +79,7 @@ Trait HasHttpRequest
         $this->options['json'] = $data;
     }
 
-    public function getData()
+    public function getData(): array
     {
         return $this->options['json'];
     }
@@ -119,7 +123,7 @@ Trait HasHttpRequest
     /**
      * 处理返回结果
      * @param $response
-     * @return mixed
+     * @return array
      */
     private function handlerResponse($response): array
     {

@@ -32,16 +32,28 @@ class WujieAiFactory
      * @param array $config
      * @return WujieAiFactory
      */
-    public static function create(array $config)
+    public static function create(array $config): WujieAiFactory
     {
         return new self($config);
     }
 
-    private function createConfig(array $config)
+    /**
+     * 创建配置
+     * User: ❤ CLANNAD ~ After Story By だんご
+     * @param array $config
+     * @return Config
+     */
+    private function createConfig(array $config): Config
     {
         return new Config($config);
     }
 
+    /**
+     * 使用魔术方法获取实例
+     * User: ❤ CLANNAD ~ After Story By だんご
+     * @param $name
+     * @return mixed
+     */
     public function __get($name)
     {
         if ( ! isset($this->clients[$name])){

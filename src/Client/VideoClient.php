@@ -14,9 +14,9 @@ class VideoClient extends BaseClient implements ClientInterface
     /**
      * 发起AI视频生视频请求
      * @param array $data
-     * @return mixed
+     * @return array
      */
-    public function create(array $data)
+    public function create(array $data): array
     {
         return $this->post('/ai/video/create', $data);
     }
@@ -24,9 +24,9 @@ class VideoClient extends BaseClient implements ClientInterface
     /**
      * 视频生成成功后的视频详情查询
      * @param array $query
-     * @return mixed
+     * @return array
      */
-    public function info(array $query)
+    public function info(array $query): array
     {
         return $this->get('/ai/video/info', $query);
     }
@@ -34,9 +34,9 @@ class VideoClient extends BaseClient implements ClientInterface
     /**
      * 视频生成结果查询
      * @param array $data
-     * @return mixed
+     * @return array
      */
-    public function generatingInfo(array $data)
+    public function generatingInfo(array $data): array
     {
         return $this->post('/ai/video/generating_info', $data);
     }
@@ -44,9 +44,9 @@ class VideoClient extends BaseClient implements ClientInterface
     /**
      * 获取视频生视频模型列表及价格表
      * @param array $data
-     * @return mixed
+     * @return array
      */
-    public function optionMenu(array $query)
+    public function optionMenu(array $query): array
     {
         return $this->get('/ai/video/option_menu', $query);
     }
@@ -54,9 +54,9 @@ class VideoClient extends BaseClient implements ClientInterface
     /**
      * 视频生视频模型排队情况查询
      * @param array $query
-     * @return mixed
+     * @return array
      */
-    public function waitTime(array $query)
+    public function waitTime(array $query): array
     {
         return $this->get('/ai/video/wait_time', $query);
     }

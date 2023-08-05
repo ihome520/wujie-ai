@@ -35,9 +35,9 @@ class Config
     /**
      * 获取APPID
      * User: ❤ CLANNAD ~ After Story By だんご
-     * @return mixed
+     * @return string
      */
-    public function getAppId()
+    public function getAppId(): string
     {
         return $this->appId;
     }
@@ -45,9 +45,9 @@ class Config
     /**
      * 获取应用私钥
      * User: ❤ CLANNAD ~ After Story By だんご
-     * @return mixed
+     * @return array
      */
-    public function getPrivateKey()
+    public function getPrivateKey(): string
     {
         return $this->privateKey;
     }
@@ -57,7 +57,7 @@ class Config
      * User: ❤ CLANNAD ~ After Story By だんご
      * @return int
      */
-    public function getVersion()
+    public function getVersion(): int
     {
         return $this->version;
     }
@@ -65,9 +65,9 @@ class Config
     /**
      * 获取请求地址
      * User: ❤ CLANNAD ~ After Story By だんご
-     * @return mixed|string
+     * @return string
      */
-    public function getUrl()
+    public function getUrl(): string
     {
         return $this->url;
     }

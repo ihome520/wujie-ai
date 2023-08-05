@@ -7,5 +7,5 @@ interface ClientInterface
     /**
      * @return mixed
      */
-    public function create(array $query);
+    public function create(array $query): array;
 }
