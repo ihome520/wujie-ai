@@ -4,11 +4,11 @@
 <span>无界AI 文生图、图生图、视频生视频相关接口SDK扩展包</span>
 </div>
 <div align="center">
-<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="http://poser.pugx.org/ihome/wujie-ai/v/stable" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="https://poser.pugx.org/ihome/wujie-ai/v/stable" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/ihome/wujie-ai"><img src="https://img.shields.io/badge/language-php-blue" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="http://poser.pugx.org/ihome/wujie-ai/v/unstable" alt="Latest Unstable Version"></a>
-<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="http://poser.pugx.org/ihome/wujie-ai/license" alt="License"></a>
-<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="http://poser.pugx.org/ihome/wujie-ai/require/php" alt="License"></a>
+<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="https://poser.pugx.org/ihome/wujie-ai/v/unstable" alt="Latest Unstable Version"></a>
+<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="https://poser.pugx.org/ihome/wujie-ai/license" alt="License"></a>
+<a href="https://packagist.org/packages/ihome/wujie-ai"><img src="https://poser.pugx.org/ihome/wujie-ai/require/php" alt="License"></a>
 </div>
 
 ### 安装
