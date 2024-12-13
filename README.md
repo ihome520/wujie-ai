@@ -39,7 +39,7 @@ WUJIE_AI_BASE_URL=https://www.abc.com # 注意地址不含最后的斜杠
 ```
 
 ### 如何使用
-> 使用前，请向[无界AI](https://www.wujieai.com/)申请相关APPID、秘钥，这里假设你已经申请过了
+> 使用前，请向[无界AI](https://www.wujieai.com/)申请相关APPID、秘钥，这里假设你已经申请过了，如果没有申请，可以到官网找客服进行申请。
 
 ```php
 $config = [
